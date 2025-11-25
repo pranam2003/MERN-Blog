@@ -12,7 +12,7 @@ function EditPost() {
   const [category, setCategory] = useState('');
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/posts/${id}`)
+    axios.get(`https://mern-blog-wlze.onrender.com/api/posts/${id}`)
       .then(res => {
         setTitle(res.data.title);
         setBody(res.data.body);
