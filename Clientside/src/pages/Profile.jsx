@@ -20,7 +20,7 @@ function Profile() {
   const handleDelete = async (id) => {
     if (!window.confirm('Delete this post?')) return;
     try {
-      await axios.delete(`http://localhost:5000/api/posts/${id}`, {
+      await axios.delete(`https://mern-blog-wlze.onrender.com/api/posts/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setPosts(posts.filter(p => p._id !== id));
