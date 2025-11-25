@@ -29,7 +29,7 @@ function PostDetails() {
 
   const fetchComments = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/comments/${id}`);
+      const res = await axios.get(`https://mern-blog-wlze.onrender.com/api/comments/${id}`);
       setComments(res.data);
     } catch {
       setComments([]);
