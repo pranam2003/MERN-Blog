@@ -8,7 +8,7 @@ function Home() {
   const [selectedTag, setSelectedTag] = useState('');
 
   useEffect(() => {
-    axios.get('https://mern-blog-wlze.onrender.com//api/posts')
+    axios.get('https://mern-blog-wlze.onrender.com/api/posts')
       .then(res => setPosts(res.data))
       .catch(() => alert('Failed to load posts'));
   }, []);
