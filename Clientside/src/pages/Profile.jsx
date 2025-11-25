@@ -10,7 +10,7 @@ function Profile() {
 
   useEffect(() => {
     if (!token) return navigate('/login');
-    axios.get('http://localhost:5000/api/posts/user/me', {
+    axios.get('https://mern-blog-wlze.onrender.com/api/posts/user/me', {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => setPosts(res.data))
