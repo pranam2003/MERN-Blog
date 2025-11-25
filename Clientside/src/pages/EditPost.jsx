@@ -27,7 +27,7 @@ function EditPost() {
   const handleUpdate = async () => {
     try {
       await axios.put(
-        `http://localhost:5000/api/posts/${id}`,
+        `https://mern-blog-wlze.onrender.com/api/posts/${id}`,
         { title, body, category },
         { headers: { Authorization: `Bearer ${token}` } }
       );
