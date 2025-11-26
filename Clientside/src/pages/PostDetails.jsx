@@ -20,7 +20,7 @@ function PostDetails() {
 
   const fetchPost = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/posts/${id}`);
+      const res = await axios.get(`https://mern-blog-wlze.onrender.com/api/posts/${id}`);
       setPost(res.data);
     } catch {
       alert('Failed to load post');
