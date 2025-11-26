@@ -40,7 +40,7 @@ function PostDetails() {
     if (!comment.trim()) return alert("Comment can't be empty");
     try {
       await axios.post(
-        `http://localhost:5000/api/comments/${id}`,
+        `https://mern-blog-wlze.onrender.com/api/comments/${id}`,
         { text: comment },
         { headers: { Authorization: `Bearer ${token}` } }
       );
