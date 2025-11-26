@@ -55,7 +55,7 @@ function PostDetails() {
   const handleDelete = async () => {
     if (!window.confirm("Are you sure you want to delete this post?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/posts/${id}`, {
+      await axios.delete(`https://mern-blog-wlze.onrender.com/api/posts/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       alert("Post deleted successfully");
