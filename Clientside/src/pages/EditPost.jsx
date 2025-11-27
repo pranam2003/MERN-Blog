@@ -12,7 +12,8 @@ function EditPost() {
   const [category, setCategory] = useState('');
 
   useEffect(() => {
-    axios.get(`https://mern-blog-wlze.onrender.com/api/posts/${id}`)
+    axios.get(`https://mern-blog-backend1-cxik.onrender.com
+/api/posts/${id}`)
       .then(res => {
         setTitle(res.data.title);
         setBody(res.data.body);
@@ -27,7 +28,8 @@ function EditPost() {
   const handleUpdate = async () => {
     try {
       await axios.put(
-        `https://mern-blog-wlze.onrender.com/api/posts/${id}`,
+        `https://mern-blog-backend1-cxik.onrender.com
+/${id}`,
         { title, body, category },
         { headers: { Authorization: `Bearer ${token}` } }
       );
