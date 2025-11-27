@@ -20,7 +20,7 @@ function PostDetails() {
 
   const fetchPost = async () => {
     try {
-      const res = await axios.get(`https://mern-blog-wlze.onrender.com/api/posts/${id}`);
+      const res = await axios.get(`https://mern-blog-backend1-cxik.onrender.com/api/posts/${id}`);
       setPost(res.data);
     } catch {
       alert('Failed to load post');
@@ -29,7 +29,7 @@ function PostDetails() {
 
   const fetchComments = async () => {
     try {
-      const res = await axios.get(`https://mern-blog-wlze.onrender.com/api/comments/${id}`);
+      const res = await axios.get(`https://mern-blog-backend1-cxik.onrender.com/api/comments/${id}`);
       setComments(res.data);
     } catch {
       setComments([]);
@@ -40,7 +40,7 @@ function PostDetails() {
     if (!comment.trim()) return alert("Comment can't be empty");
     try {
       await axios.post(
-        `https://mern-blog-wlze.onrender.com/api/comments/${id}`,
+        `https://mern-blog-backend1-cxik.onrender.com/api/comments/${id}`,
         { text: comment },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -55,7 +55,7 @@ function PostDetails() {
   const handleDelete = async () => {
     if (!window.confirm("Are you sure you want to delete this post?")) return;
     try {
-      await axios.delete(`https://mern-blog-wlze.onrender.com/api/posts/${id}`, {
+      await axios.delete(`https://mern-blog-backend1-cxik.onrender.com/api/posts/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       alert("Post deleted successfully");
