@@ -10,7 +10,7 @@ function Profile() {
 
   useEffect(() => {
     if (!token) return navigate('/login');
-    axios.get('https://mern-blog-wlze.onrender.com/api/posts/user/me', {
+    axios.get('https://mern-blog-backend1-cxik.onrender.com/api/posts/user/me', {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => setPosts(res.data))
@@ -20,7 +20,7 @@ function Profile() {
   const handleDelete = async (id) => {
     if (!window.confirm('Delete this post?')) return;
     try {
-      await axios.delete(`https://mern-blog-wlze.onrender.com/api/posts/${id}`, {
+      await axios.delete(`https://mern-blog-backend1-cxik.onrender.com/api/posts/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setPosts(posts.filter(p => p._id !== id));
