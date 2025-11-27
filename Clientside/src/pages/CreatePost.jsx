@@ -19,7 +19,8 @@ const handleSubmit = async (e) => {
   }
 
   try {
-    await axios.post('https://mern-blog-wlze.onrender.com/api/posts', {
+    await axios.post('https://mern-blog-backend1-cxik.onrender.com
+/api/posts', {
       ...post,
       tags: post.tags.split(',').map(t => t.trim())
     }, {
